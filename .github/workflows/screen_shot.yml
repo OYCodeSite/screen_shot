@@ -1,7 +1,7 @@
 name: screen_shot
 on: 
   schedule:
-    - cron: '0 0 * * 0'
+    - cron: '0 7 * * 0'
     
   push:
     branches: 
