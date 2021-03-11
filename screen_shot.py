@@ -52,5 +52,5 @@ def downloadFriends(url_prefix="https://image.thum.io/get/width/400/crop/800/all
 
 if __name__ == '__main__':
     getLinkFriends("https://oy6090.top/link/")
-    getGiteeFriends("OYCodeSIte", "friend")
+    getGiteeFriends("OYCodeSite", "friend")
     downloadFriends()
