@@ -16,9 +16,9 @@ jobs:
       uses: actions/checkout@main
       
     - name: 安装Node
-      uses: actions/setup-node@v2-beta
+      uses: actions/setup-node@v1
       with:
-        node-version: "11.15.0"
+        node-version: "14.x"
 
     - name: 缓存依赖
       uses: actions/cache@v2.1.1
@@ -30,8 +30,9 @@ jobs:
     - name: 安装依赖
       if: steps.cache-dependencies.outputs.cache-hit != 'true'
       run: |
-        npm install
-        npm install gulp@3 gulp-imagemin@2.2.1
+        npm install -g cnpm --registry=http://registry.npm.taobao.org
+        cnpm install -g gulp-cli
+        cnpm install gulp-imagemin
         
     - name: 安装 Python
       uses: actions/setup-python@v1
