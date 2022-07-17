@@ -31,7 +31,7 @@ jobs:
       if: steps.cache-dependencies.outputs.cache-hit != 'true'
       run: |
         npm install
-        npm install gulp gulp-imagemin
+        npm install gulp@4 gulp-imagemin@2.2.1
         
     - name: 安装 Python
       uses: actions/setup-python@v1
