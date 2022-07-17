@@ -18,7 +18,7 @@ jobs:
     - name: 安装Node
       uses: actions/setup-node@v2-beta
       with:
-        node-version: "12.10.0"
+        node-version: "10.x"
 
     - name: 缓存依赖
       uses: actions/cache@v2.1.1
