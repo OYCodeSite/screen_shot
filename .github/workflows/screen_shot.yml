@@ -31,7 +31,7 @@ jobs:
       if: steps.cache-dependencies.outputs.cache-hit != 'true'
       run: |
         npm install -g cnpm --registry=http://registry.npm.taobao.org
-        cnpm install -g gulp-cli
+        cnpm install  gulp
         cnpm install gulp-imagemin
         
     - name: 安装 Python
