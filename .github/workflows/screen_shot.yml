@@ -18,7 +18,7 @@ jobs:
     - name: 安装Node
       uses: actions/setup-node@v2-beta
       with:
-        node-version: "12.x"
+        node-version: "11.15.0"
 
     - name: 缓存依赖
       uses: actions/cache@v2.1.1
@@ -31,7 +31,7 @@ jobs:
       if: steps.cache-dependencies.outputs.cache-hit != 'true'
       run: |
         npm install
-        npm install gulp@3 gulp-imagemin@2.2.1
+        npm install gulp@2.3.0 gulp-imagemin@2.2.1
         
     - name: 安装 Python
       uses: actions/setup-python@v1
